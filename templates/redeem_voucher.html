@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="format-controller">
+    <div class="container-glass6">
+        <img class="rounded" src="{% static 'images/background.png' %}" alt="">
+
+            <div class="content-section2 mb-4">
+                <div class="content-section mb-4">
+                    <div class="container">
+                <button class="btn btn-primary custom-hover-color" onclick="displayVouchers()">View Voucher</button>
+
+                <div class="voucher-details item" id="voucherDetails" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Voucher Code</th>
+                                <th>Expiration Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="voucherTableBody">
+                            <!-- Voucher details will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascript}
+<script src="{% static 'js/registration.js' %}"></script>
+{% endblock javascript}

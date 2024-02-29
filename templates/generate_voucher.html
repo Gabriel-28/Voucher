@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="format-controller">
+    <div class="container-glass6">
+        <img class="rounded" src="{% static 'images/background.png' %}" alt="">
+        <div class="content-section2 mb-4">
+            <div class="content-section mb-4">
+                <div class="container">
+    <form action="" id="generationForm">
+        
+        <h1 class="text-success">Voucher Module</h1>
+        <div class="section">
+        <small class="text-sm">Admin Interface to Generate Vouchers:</small><br><br>
+            <label>Selecct Redemption Type:</label>
+            <select id="redemption_type" class="form-control item">
+                <option value="single">Single Redemption</option>
+                <option value="multiple">Multiple Redemption</option>
+                <option value="xtimes">X times Redemption</option>
+                <option value="beforeTime">Redeem only before a certain point in time</option>
+            </select>
+    
+            <div class="form-group">
+                <label for="expiry_date">Expiration Date:</label><br>
+                <input type="date" class="form-control item" id="expiry_date"><br><br>
+            </div>
+    
+            <button onclick="generateVouchers()"  id="" class="form-control item btn btn-success">Generate Vouchers</button>
+        </div>
+    </form>
+    </div>
+    </div>   
+ </div>
+</div>
+
+    {% endblock %}
+    {% block javascript}
+    <script src="{% static 'js/registration.js' %}"></script>
+    {% endblock javascript}
