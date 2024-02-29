@@ -1,5 +1,3 @@
-
-
 setting up the project steps:
 0.
 use mySQL workbench to create the database
